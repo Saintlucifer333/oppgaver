@@ -9,17 +9,16 @@
 </head>
 <body>
     
-    <div onclick="doSomething(this, 'yellow')">rainbow six siege</div>
-    <div onclick="doSomething(this, 'purple')">siege</div>
-    <div onclick="doSomething(this, 'green')">rainbow six</div>
-    <div onclick="doSomething(this, 'red')">siege is awsome</div>
+    <div style="background-color: aquamarine;" onclick="doSomething(this, 'aquamarine')">rainbow six siege</div>
+    <div style="background-color: blue;" onclick="doSomething(this, 'blue')">siege</div>
+    <div style="background-color: chartreuse;" onclick="doSomething(this, 'chartreuse')">rainbow six</div>
+    <div style="background-color: darkgoldenrod;" onclick="doSomething(this, 'darkgoldenrod')">siege is awsome</div>
+    <div style="background-color: darkmagenta;" onclick="doSomething(this, 'darkmagenta')">my PC is trash</div>
 
     <div id="hi"></div>
     <script>
         function doSomething(element, color) {
-            var hi = document.getElementById('hi');
-            hi.innerHTML +=  element.innerHTML;
-            hi.style.backgroundColor = color;
+            document.getElementById('hi').innerHTML = `<div style="background-color: ${color}">${element.innerHTML}</div>`;
         }
     
     </script>
